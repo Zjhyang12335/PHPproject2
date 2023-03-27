@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="Stylesheet" href="../css/style.css" />
+</head>
+<body>
+<div class="detail">
+	<table>
+		<tr>
+			<th colspan="3">展示学生资料</th>
+		</tr>
+		<tr>
+			<td>姓　　名：</td>
+			<td><?php echo $name;?></td>
+		</tr>
+		<tr>
+			<td>出生日期：</td>
+			<td><?php echo $birth;?></td>
+		</tr>
+		<tr>
+			<td>年　　龄:</td>
+			<td><?php echo $age;?></td>
+		</tr>
+		<tr>
+			<td>学　　科:</td>
+			<td><?php echo $xueke;?></td>
+		</tr>
+		<tr>
+			<td>学　　号:</td>
+			<td><?php echo $xuehao;?></td>
+		</tr>
+		<tr>
+			<td>性　　别:</td>
+			<td><?php echo $sex;?><img alt="" src="../images/<?php echo $seximg;?>.png"></td>
+		</tr>
+		<tr>
+			<td >星　　座:</td>
+			<td class="const"><?php echo $const;?><img src="../images/<?php echo $lev;?>.png"></td>
+		</tr>
+		<tr>
+			<td>个性标签:</td>
+			<td class="labels">
+				<?php
+					for($i=0;$i<$ran;$i++){	
+						$class_name = array('blue','red','yellow','green');
+						$index =array_rand($class_name);				
+						echo '<span class="'.$class_name[$index].'">'.$labels[$i].'</span>';
+					}
+				?>
+			</td>
+		</tr>
+	</table>
+	<div class="icon-top"></div>
+	<div class="icon-bottom"></div>
+</div>
+
+</body>
+</html>

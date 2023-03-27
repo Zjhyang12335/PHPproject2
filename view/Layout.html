@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="Stylesheet" href="../css/style.css" />
+  <script>
+	function opens(obj) {
+		for(var i=1;i<3;i++){
+			if(i==obj){
+				document.getElementById("dis"+i).style.display="block";
+			}else{
+				document.getElementById("dis"+i).style.display="none";
+			}
+		}
+	}
+  </script>
+ </head>
+ <body>
+	 <div class="top">
+		<img src="../images/title.png" alt="学生信息管理" />
+	 </div>
+	 <div class="main">
+		 <div class="left">
+			<ul>
+				<li><a href="#" onclick="opens(1)">学生管理</a></li>
+				<li><a href="#" onclick="opens(2)">班级管理</a></li>
+				<li>学科管理</li>
+				<li>成绩管理</li>
+				<li>系统设置</li>
+			</ul>
+			<div class="point"></div>
+		</div>
+		 <div id="dis1" class="content">
+			<?php require './view/content.html';?>
+		 </div>
+		 <div id="dis2" class="content" style="display: none;">
+			<?php require './view/class.html';?>
+		 </div>
+	 </div>
+ </body>
+</html>
